@@ -15,7 +15,7 @@ graph = {
 print(graph)
 
 
-def bfs(graph, start, goal):
+def UCS(graph, start, goal):
 	explored = []
 	queue = PriorityQueue()
 	queue.put(start)
@@ -41,4 +41,4 @@ def bfs(graph, start, goal):
 
 	return explored
 
-print("Final Output : ", (bfs(graph, ( 0, '/', "A"), "B")))
+print("Final Output : ", (UCS(graph, ( 0, '/', "A"), "B")))
