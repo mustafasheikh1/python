@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+    
+    <category>
+      <pattern>ANIME</pattern>
+      <template><set name = "topic">anime</set><srai>ANIME</srai></template>  
+   </category>
+   
+    <topic name="anime">
+        
+        <category>
+            <pattern>_ ANIME</pattern>
+            <template><srai>anime</srai></template>
+        </category>
+        
+    	<category>
+    	    <pattern>ANIME</pattern>
+    	    <template>
+    	        Yeah i know alot about anime
+    	        <delay>1</delay>
+    	        <image>https://assets3.thrillist.com/v1/image/2813543/size/gn-gift_guide_variable_c.jpg</image>
+    	        Are you a fan too.
+    	        <reply>
+    	            <text>Yes</text>
+    	            <postback>USER QUERY ID 1</postback>
+                </reply>
+                <reply>
+                    <text>No</text>
+                    <postback>USER QUERY ID 2</postback>
+                </reply>
+            </template>
+        </category>
+        
+        
+        
+        <category>
+            <pattern>_ NARUTO</pattern>
+            <template><srai>NARUTO</srai></template>
+        </category>
+        
+        <category>
+            <pattern>NARUTO</pattern>
+            <template>
+                <delay>1</delay>
+                Yes i'm form the naruto world
+                <card>
+                    <image>https://dw9to29mmj727.cloudfront.net/promo/2016/5300-SeriesHeaders_Naruto20th_2000x800_jpg</image>
+                    <title>Naruto</title>
+                    <subtitle>You know it</subtitle>
+                </card>
+                Naruto is a Japanese manga series written and illustrated by Masashi Kishimoto. It tells the story of Naruto Uzumaki
+                <button>
+                    <text>Know more</text>
+                    <url>https://www.viz.com/naruto</url>
+                </button>
+            </template>
+        </category>
+        
+        <category>
+            <pattern>TOKYO GHOUL</pattern>
+            <template>
+                Do you like Tokyo ghoul
+            </template>
+        </category>
+       
+        <category>
+            <that>Do you like Tokyo Ghoul</that>
+            <pattern>NO</pattern>
+            <template><srai>USER QUERY ID 2</srai></template>
+         </category> 
+         
+         <category>
+            <that>Do you like Tokyo Ghoul</that>
+            <pattern>YES</pattern>
+            <template><srai>USER QUERY ID 1</srai></template>
+         </category> 
+    </topic>
+</aiml>

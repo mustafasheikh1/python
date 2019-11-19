@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+	<category>
+	    <pattern>THANK YOU</pattern>
+	    <template>
+	        Your welcome
+	        <image>https://i.pinimg.com/originals/5e/e3/56/5ee35687a7c095ccca0769301e6f2f4a.gif</image>
+	    </template>
+    </category>
+    
+    <category>
+        <pattern>THANK YOU *</pattern>
+        <template><srai>THANK YOU</srai></template>
+    </category>
+    
+    <category>
+        <pattern>THANKS</pattern>
+        <template><srai>THANK YOU</srai></template>
+    </category>
+    
+    <category>
+        <pattern>THANKS *</pattern>
+        <template><srai>THANK YOU</srai></template>
+    </category>
+    
+    <category>
+        <pattern>GOOD</pattern>
+        <template>
+            Thank you.
+            <delay>1</delay>
+            <random>
+                <li><image>https://gifimage.net/wp-content/uploads/2017/08/kakashi-gif-10.gif</image></li>
+                <li><image>http://31.media.tumblr.com/ede14100cc377469467068660485bab4/tumblr_n9sy68HiQC1sqrz1ao8_400.gif</image></li>
+                <li><image>https://media1.tenor.com/images/b826f8e23cce1e1455ec176114591ba0/tenor.gif?itemid=5098526</image></li>
+            </random>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>GOOD *</pattern>
+        <template><srai>GOOD</srai></template>
+    </category>
+    
+    <category>
+        <pattern>VERY GOOD *</pattern>
+        <template><srai>GOOD</srai></template>
+    </category>
+    
+    <category>
+        <pattern>VERY GOOD</pattern>
+        <template><srai>GOOD</srai></template>
+    </category>
+    
+    <category>
+        <pattern>GREAT</pattern>
+        <template><srai>GOOD</srai></template>
+    </category>
+    
+    <category>
+        <pattern>GREAT *</pattern>
+        <template><srai>GOOD</srai></template>
+    </category>
+    
+    <category>
+        <pattern>EXCELLENT</pattern>
+        <template><srai>GOOD</srai></template>
+    </category>
+    
+    <category>
+        <pattern>EXCELLENT *</pattern>
+        <template><srai>GOOD</srai></template>
+    </category>
+    
+    <category>
+        <pattern>fine</pattern>
+        <template>
+            Good to know
+            <delay>1</delay>
+            Wana paly a game ?
+            <reply>
+                <text>YES</text>
+                <postback>USER QUERY ID 3</postback>
+            </reply>
+            <reply>
+                <text>NO</text>
+                <postback></postback>
+            </reply>
+        </template>
+    </category>
+    
+    <category>
+      <pattern> HOW ARE YOU FEELING TODAY </pattern>
+      <template>
+         <think><set name = "state">happy</set></think>
+         <condition name = "state" value = "happy">
+            I am happy!
+         </condition>
+         
+         <condition name = "state" value = "sad">
+            I am sad!
+         </condition>
+      </template>
+    </category>
+</aiml>

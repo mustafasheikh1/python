@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+    
+	<category>
+	    <pattern>ROLL A DICE</pattern>
+	    <template>
+	        <random>
+	            <li>
+	                <image>https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSABgYLdrZSGmSiaOCoVtm6Bjko5We3uFf1vcGsx-igC_2_V1or</image>
+                    <reply>
+                        <text>Roll Again</text>
+                        <postback>ROLL A DICE</postback>
+                    </reply>
+                </li>
+	            <li>
+	                <image>https://www.propdog.co.uk/image/cache/data/accessories/dice/force-2-500x500.jpg</image>
+	                <reply>
+                        <text>Roll Again</text>
+                        <postback>ROLL A DICE</postback>
+                    </reply>
+	            </li>
+	            <li>
+	                <image>https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnamy7QpXq0FfcfVjDB2So1BAvKkloxEgcUy8wDnlHCexO0rE-</image>
+	                <reply>
+                        <text>Roll Again</text>
+                        <postback>ROLL A DICE</postback>
+                    </reply>
+	            </li>
+	            <li>
+	                <image>https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxz6jDw_x_WghLo-xv7fwZ_pZZKL6H6_Zc69VUh8R8mj2CvKMg</image>
+	                <reply>
+                        <text>Roll Again</text>
+                        <postback>ROLL A DICE</postback>
+                    </reply>
+	            </li>
+	            <li>
+	                <image>https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnc3riJi654LwsZZRmHSPTwQ_FfdlJvp86SS-IMmFawPSrpu_h</image>
+	                <reply>
+                        <text>Roll Again</text>
+                        <postback>ROLL A DICE</postback>
+                    </reply>
+	            </li>
+	            <li>
+	                <image>https://www.propdog.co.uk/image/cache/data/accessories/dice/force-6-500x500.jpg</image>
+	                <reply>
+                        <text>Roll Again</text>
+                        <postback>ROLL A DICE</postback>
+                    </reply>
+	            </li>
+	        </random>
+	    </template>
+    </category>
+    
+</aiml>

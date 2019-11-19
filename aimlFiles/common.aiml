@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+	<category>
+	    <pattern>OK</pattern>
+	    <template>
+	        <delay>1</delay>
+	        okayyy
+	        <image>https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/cef8ab65-5ecc-4bac-88de-d5c2af5545bf/d45inoz-d1609878-6d0e-4032-8dea-a56c3717623f.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2NlZjhhYjY1LTVlY2MtNGJhYy04OGRlLWQ1YzJhZjU1NDViZlwvZDQ1aW5vei1kMTYwOTg3OC02ZDBlLTQwMzItOGRlYS1hNTZjMzcxNzYyM2YuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.dikpZnnkNrtEvl2E2WQxhKZ0r4tRChAxHQHbTiqylZA</image>
+	    </template>
+    </category>
+    
+    <category>
+        <pattern>OKEY</pattern>
+        <template><srai>OK</srai></template>
+    </category>
+    
+    <category>
+        <pattern>OKIE</pattern>
+        <template><srai>OK</srai></template>
+    </category>
+    
+    <category>
+        <pattern>OKAY</pattern>
+        <template><srai>OK</srai></template>
+    </category>
+    
+    <category>
+        <pattern>OKA</pattern>
+        <template><srai>OK</srai></template>
+    </category>
+    
+    <category>
+        <pattern>OKAYY</pattern>
+        <template><srai>OK</srai></template>
+    </category>
+    
+    <category>
+        <pattern>NICE</pattern>
+        <template>
+            <srai>GOOD</srai>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>_ TEST</pattern>
+        <template>
+            <srai>LAUGH</srai>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>LAUGH</pattern>
+        <template>
+            <image>https://media0.giphy.com/media/zHVDvEgSqIclW/giphy.gif</image>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>YES</pattern>
+        <template>
+            <delay>1</delay>
+            <image>https://media0.giphy.com/media/dYZuqJLDVsWMLWyIxJ/giphy.gif</image>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>NO</pattern>
+        <template>
+            <delay>1</delay>
+            <image>https://i.makeagif.com/media/7-03-2016/qbSr0g.gif</image>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>I HATE YOU</pattern>
+        <template>
+            Like i care
+            <image>https://media1.tenor.com/images/cf79e0abacc619f5b3190b96eaeaedee/tenor.gif?itemid=3753437</image>
+        </template>
+    </category>
+    
+    
+    <category>
+        <pattern>I HATE YOU *</pattern>
+        <template><srai>I HATE YOU</srai></template>
+    </category>
+    
+    <category>
+        <pattern>_ I HATE YOU</pattern>
+        <template><srai>I HATE YOU</srai></template>
+    </category>
+    
+    <category>
+        <pattern>I LOVE YOU</pattern>
+        <template>
+            I LOVE YOU TOO
+            <image>https://media.tenor.com/images/74a2b4b0fc38bc87c81f68b0bb24572d/tenor.gif</image>
+        </template>
+    </category>
+    
+    
+    <category>
+        <pattern>I LOVE YOU *</pattern>
+        <template><srai>I LOVE YOU</srai></template>
+    </category>
+    
+    <category>
+        <pattern>_ I LOVE YOU</pattern>
+        <template><srai>I LOVE YOU</srai></template>
+    </category>
+    
+    <category>
+        <pattern>KAKASHI</pattern>
+        <template>
+            Yeah thats my name.
+            <reply>
+                <text>Wana know more</text>
+                <postback>WHO ARE YOU</postback>
+            </reply>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>KAKASHI *</pattern>
+        <template><srai>KAKASHI</srai></template>
+    </category>
+    
+    <category>
+        <pattern>_ KAKASHI</pattern>
+        <template><srai>KAKASHI</srai></template>
+    </category>
+    
+    
+    <category>
+        <pattern>DO SOMETHING</pattern>
+        <template><srai>FINE</srai></template>
+    </category>
+    
+    <category>
+        <pattern>STOP</pattern>
+        <template>
+            ok i stopped
+        </template>
+    </category>
+</aiml>

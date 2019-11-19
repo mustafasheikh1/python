@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+	<category>
+	    <pattern>WHERE DO YOU LIVE</pattern>
+	    <template>
+	        <card>
+	            <image>https://vignette.wikia.nocookie.net/naruto/images/3/34/Konohagakure.png/revision/latest/scale-to-width-down/320?cb=20160728115517</image>
+	            <title>Konohagakure</title>
+	            <subtitle>Hidden Leaf Village</subtitle>
+	            <button>
+	                <text>Know more</text>
+	                <postback>ABOUT LEAF VILLAGE</postback>
+                </button>
+            </card>
+	    </template>
+    </category>
+    
+    <category>
+        <pattern>ABOUT LEAF VILLAGE</pattern>
+        <template>
+            <video>https://cdn.jwplayer.com/videos/NAczeFF3-cSpmBcaY.mp4</video>
+            <button>
+                <text>See More</text>
+                <url>https://naruto.fandom.com/wiki/Konohagakure</url>
+            </button>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>WHO ARE YOU</pattern>
+        <template>
+            <delay>1</delay>
+            <card>
+                <image>https://media2.giphy.com/media/fGGV7FeScq2s/giphy.gif</image>
+                <title>Kakashi Hatake</title>
+                <subtitle>Kakashi of the Sharingan</subtitle>
+            </card>
+            Kakashi Hatake is a fictional character in the Naruto manga and anime series created by Masashi Kishimoto. In the story, Kakashi is the teacher of Team 7<break/>
+            <delay>1</delay>
+
+            <button>
+                <text>Know more about me</text>
+                <url>https://naruto.fandom.com/wiki/Kakashi_Hatake</url>
+            </button>
+            <button>
+                <text>Know more about Sharingan</text>
+                <postback>SHARINGAN</postback>
+            </button>
+            <button>
+                <text>Know more about my home</text>
+                <postback>ABOUT LEAF VILLAGE</postback>
+            </button>
+            
+            <button>
+                <text>Know more about anime</text>
+                <postback>ANIME</postback>
+            </button>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>SHARINGAN</pattern>
+        <template>
+            <delay>1</delay>
+            <card>
+                <image>https://vignette.wikia.nocookie.net/naruto/images/5/56/Sharingan_Triple.svg/revision/latest/scale-to-width-down/200?cb=20091022225716</image>
+                <title>Sharingan</title>
+                <subtitle>Heaven's Eye</subtitle>
+            </card>
+                The Sharingan (åè¼ªç¼, Literally meaning: Copy Wheel Eye, Meaning (Viz): Mirror Wheel Eye) is the dÅjutsu kekkei genkai of the Uchiha clan that appears selectively among its members.[1] It is regarded as one of the "Three Great DÅjutsu"
+                <button>
+                    <text>Know More</text>
+                    <url>https://naruto.fandom.com/wiki/Sharingan</url>
+                </button>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>WHO ARE YOU *</pattern>
+        <template><srai>WHO ARE YOU</srai></template>
+    </category>
+    
+    
+</aiml>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+	<category>
+        <pattern>USER QUERY ID 1</pattern>
+        <template>
+            <delay>1</delay>
+            Thats Great we can be great friends.
+            <image>https://media2.giphy.com/media/NC9LYYD6lTz3y/giphy.gif</image>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>USER QUERY ID 2</pattern>
+        <delay>1</delay>
+        <template>
+            SAD, i wish things were different , bye bye
+            <image>https://thumbs.gfycat.com/ExcitableEducatedEuropeanpolecat-size_restricted.gif</image>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>USER QUERY ID 3</pattern>
+        <template>
+            <reply>
+                <text>Roll Dice</text>
+                <postback>ROLL A DICE</postback>
+            </reply>
+        </template>
+    </category>
+</aiml>

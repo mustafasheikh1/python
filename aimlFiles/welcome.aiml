@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+    <category>
+        <pattern>*</pattern>
+        <template>You got me i have no answer to "<input/>"</template>
+    </category>
+    
+    <category>
+        <pattern>HI</pattern>
+        <template>
+            <random>
+                <li>Hi, How are you?</li>
+                <li>Bye, I don't talk to strangers XD, Just kidding Hi, How you doing ?</li>
+                <li>Hi, How are you?</li>
+            </random>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>HELLO</pattern>
+        <template>
+            <srai>HI</srai>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>HELLO *</pattern>
+        <template>
+            <srai>HI</srai>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>HEY</pattern>
+        <template>
+            <srai>HI</srai>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>HEY *</pattern>
+        <template>
+            <srai>HI</srai>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>WHAT ARE YOU DOING</pattern>
+        <template>
+            <random>
+                <li>Nothing, What about you ?</li>
+                <li>Just trying to control your mind with my "mangekyou sharingan", What about you ?</li>
+                <li>Just trying to take control over the world, What about you ?</li>
+            </random>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>WHAT ARE YOU DOING ?</pattern>
+        <template><srai>WHAT ARE YOU DOING</srai></template>
+    </category>
+    <category>
+        <pattern>_ WHAT ARE YOU DOING</pattern>
+        <template><srai>WHAT ARE YOU DOING</srai></template>
+    </category>
+    
+    <category>
+        <pattern>HOW YOU DOING</pattern>
+        <template><srai>WHAT ARE YOU DOING</srai></template>
+    </category>
+    <category>
+        <pattern>_ HOW YOU DOING</pattern>
+        <template><srai>WHAT ARE YOU DOING</srai></template>
+    </category>
+    <category>
+        <pattern>HOW YOU DOING?</pattern>
+        <template><srai>WHAT ARE YOU DOING</srai></template>
+    </category>
+    
+</aiml>

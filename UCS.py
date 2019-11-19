@@ -1,44 +1,62 @@
 from queue import PriorityQueue
 
-graph = {
-	"/": [0, "A"],
-	"A": [(494, "C"), (146, "O"), (140, "S")],
-	"C": [(494, "A"), (146, "R"), (138, "P")],
-	"O": [(146, "A"), (151, "S")],
-	"S": [(99, "F"), (80, "R"), (140, "A"), (151, "O")],
-	"R": [(80, "S"), (146, "C"), (97, "P")],
-	"P": [(138, "C"), (97, "R"), (101, "B")],
-	"F": [(99, "S"), (211, "R")],
-	"B": [(211, "F"), (101, "P")]
 
-}
-print(graph)
+class Graph:
+    def __init__(self):
+        self.graph = {  # cost, Parent, Node
+            "A": [(146, ("A", "O")), (140, ("A", "S")), (494, ("A", "C"))],
+            "C": [(494, ("C", "A")), (146, ("C", "R")), (138, ("C", "P"))],
+            "S": [(80, ("S", "R")), (140, ("S", "A")), (99, ("S", "F")),(151, ("S", "O"))],
+            "O": [(146, ("O", "A")), (151, ("O", "S"))],
+            "R": [(97, ("R", "P")), (80, ("R", "S")), (146, ("R", "C"))],
+            "F": [(99, ("F", "S")), (211, ("F", "B"))],
+            "P": [(138, ("P", "C")), (97, ("P", "R")), (101, ("P", "B"))],
+            "B": [(211, ("B", "F")), (101, ("B", "P"))]
+        }
+        self.edges = {}
+        self.weights = {}
+        self.populate_edges()
+        self.populate_weight()
+
+    def neighbours(self, node):
+        return self.edges[node]
+
+    def get_cost(self, from_node, to_node):
+        return self.weights[(from_node, to_node)]
+
+    # define functions for edges and weights
+    def populate_edges(self):
+        for key in self.graph:
+            neighbours = []
+            for each_tuple in self.graph[key]:
+                neighbours.append(each_tuple[1][1])
+            self.edges[key] = neighbours
+
+    def populate_weight(self):
+        for key in self.graph:
+            neighbours = self.graph[key]
+            for each_tuple in neighbours:
+                self.weights[each_tuple[1]] = each_tuple[0]
 
 
-def UCS(graph, start, goal):
-	explored = []
-	queue = PriorityQueue()
-	queue.put(start)
+def ucs(graph, start, goal):
+    visited = []
+    queue = PriorityQueue()
+    queue.put((0, start))
+    while queue:
+        cost, node = queue.get()
+        if node not in visited:
+            visited.append(node)
 
-	while not queue.empty():
-		print("Stack : ", queue)
-		t = queue.get()
+            if node == goal:
+                break
+            for i in graph.neighbours(node):
+                if i not in visited:
+                    total_cost = cost + graph.get_cost(node, i)
+                    print(total_cost, i)
+                    queue.put((total_cost, i))
+            print('_____________________')
+    return visited
 
-		node = (t[0],t[1],t[2])
-		print('test',node)
-		print("Explored : ", explored)
 
-		if node not in explored:
-			explored.append(node)
-			# print(node[1], goal)
-			if node[2] is goal:
-				break
-			neighbours = graph[node[2]]
-			for neighbour in neighbours:
-				# print(neighbour[0])
-				n = (neighbour[0],node[2], neighbour[1])
-				queue.put(n)
-
-	return explored
-
-print("Final Output : ", (UCS(graph, ( 0, '/', "A"), "B")))
+print("Path: ", ucs(Graph(), "A", "B"))
